@@ -35,6 +35,7 @@ gpg --list-keys
 gpg --list-secret-keys
 ```
 config maven conf/setting.xml
+-----------------------------
 ```xml
 <servers>
     <server>
