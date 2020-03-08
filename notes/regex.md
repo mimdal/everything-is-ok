@@ -2,7 +2,7 @@ Regular Expression
 ------------------
 Some people, when confronted with a problem, think "I know, I'll use regular expressions." Now they have two problems.
 
-```regexp 
+```shell 
 quantifiers:    
     *   →       0-1-2-...    
     +   →       1-2-3-...   
@@ -34,16 +34,19 @@ greedy and lazy
 <.+?>
 
 boundry: 
-\b: Between two characters in the string, where one is a word character and the other is not a word character!
+\b: Between two characters in the string,   
+where one is a word character and the other is not a word character!
 \B: negative, Damn it! boundry has negative pattern.
 
 back reference:
-to repeat a pattern, Backreferences match the same text as previously matched by a capturing group
+to repeat a pattern. 
+Backreferences match the same text as previously matched by a capturing group
 \3
 
 look ahead and behind = lookaround
 lookaround actually matches characters, but then gives up the match, 
-returning only the result. They do not consume characters in the string. they are called “assertions”.
+returning only the result not chars defind in lookaround. 
+They do not consume characters in the string. they are called “assertions”.
 d(?=r)      :   find d's after  them is r
 (?<=r)d     :   find d's before them is r
 Has Negative!! 
