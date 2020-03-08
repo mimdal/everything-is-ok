@@ -27,15 +27,21 @@ pom.xml
 ```
 Configure GPG to sign Maven artifact 
 ------------------------------------
-```console
+by a tool like gnupg2, generate a key pair and share pub-key to a keyserver.    
+Keyserver synchronize between each other, so it takes some time, be patient!
+```bash
 sudo apt-get install gnupg2
-gpg --version
-gpg --gen-key 
-gpg --list-keys
-gpg --list-secret-keys
+gpg2 --version
+gpg2 --gen-key 
+gpg2 --list-keys
+gpg2 --list-secret-keys
+gpg2 --keyserver hkp://pool.sks-keyservers.net --send-keys A6BAB25C     #A6BAB25C is pubkeyId
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys A6BAB25C
+gpg2 --edit-key A6BAB25C
 ```
 config maven conf/setting.xml
 -----------------------------
+to protect your credential, do not set these config in project pom.
 ```xml
 <servers>
     <server>
