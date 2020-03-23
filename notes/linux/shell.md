@@ -46,4 +46,9 @@ function() {            #call: function "param 1" param2
     echo $1
 }
 
+==========================================
+#set env variable and path
+export JAVA_HOME=/path/to/jdk
+export M2_HOME=/path/to/maven
+export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin
 ```
